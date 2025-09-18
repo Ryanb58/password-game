@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The (Tricky) Password Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>The Password Game</h1>
+    <p class="subtitle">Each level changes the rules. Read the label carefully.</p>
+
+    <div id="game" class="game">
+      <div class="level-indicator">Level <span id="levelNumber">1</span> / 10</div>
+      <label id="prompt" for="answerInput" class="prompt">Loading…</label>
+      <input id="answerInput" type="text" autocomplete="off" autofocus aria-describedby="feedback" />
+      <div class="controls">
+        <button id="submitBtn">Submit</button>
+        <button id="skipBtn" class="secondary" title="Restart from level 1">Restart</button>
+      </div>
+      <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+      <progress id="progress" value="1" max="10" aria-label="Progress"></progress>
+    </div>
+
+    <details class="help">
+      <summary>Need a hint?</summary>
+      <div id="hintArea"></div>
+    </details>
+
+    <footer>
+      <small>Made for fun. Case matters unless the label says otherwise.</small>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
